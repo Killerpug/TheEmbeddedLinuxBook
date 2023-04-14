@@ -1,6 +1,13 @@
 # Getting started
 ## Setting up a repository
-There are many ways to install git for windows, and many GUIs... but the most basic is to download git directly from Git website: https://git-scm.com/download/win. There is a first-time-only setup(git config) that allows to store your custom configuration variables and profile(user, email) for all repositories that you work on. So don't forget to run the setup commands on the cheat sheet at bottom. Now lets create or clone a repository:
+There are many ways to install git for windows, and many GUIs... but the most basic is to download git directly from Git website: https://git-scm.com/download/win. 
+
+As for Linux, you can just download the package from package manager:
+``` sudo apt get git```
+
+There is a first-time-only setup(git config) that allows to store your custom configuration variables and profile(user, email) for all repositories that you work on. So don't forget to run the setup commands on the cheat sheet at bottom.
+
+Now lets create or clone a repository:
 
 - **git init** → This takes you current directory and turns it into a git repository by creating a new
 subdirectory named .git that contains all the necessary repository files for git.
