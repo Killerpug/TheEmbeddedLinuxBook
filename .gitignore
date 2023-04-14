@@ -1,0 +1,4 @@
+.mdbook-plantuml-cache
+output.log
+plantuml.jar
+src/mdbook-plantuml-img
