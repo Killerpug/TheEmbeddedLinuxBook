@@ -1,5 +1,4 @@
 # The Linux system
-# Linux
 
 ## A short Timeline of computer advancements:
 
