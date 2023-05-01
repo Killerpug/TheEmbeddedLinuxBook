@@ -1,7 +1,8 @@
 # ACTIVITY TIME: Simple calculator
 
-With the commands mentioned above we can start working on our first versioned project.
+With the commands mentioned in the past pages we can start working on our first versioned project.
 Now assume you found an interesting code for a simple calculator(calculator.c).
+Note: Remember to compile it as $gcc calculator.c -o executableName
 ```
     #include <stdio.h>
 
@@ -46,15 +47,13 @@ Now assume you found an interesting code for a simple calculator(calculator.c).
             printf("Result = %d\n", a + b);
     }
 ```
-
-## Incremental change 1
-It only has the addition operation but we want to multiply as well. So, to record our progress, lets implement git.
-Note: Remember to compile it as >gcc calculator.c -o executable
-
+Lets create a new repository and add this as the first commit.
 Hints:
-Create a new git repository.
 Check/update your user/email configuration(only on first time)
 Add calculator.c
+
+## Incremental change 1
+Our first calculator only has the addition operation but we want to multiply as well.
 
 ## Incremental change 2
 Style changes:
@@ -64,5 +63,5 @@ Style changes:
 
 # Incremental change 3
 Modular calculator:
-
-- Divide calculator in different files for maintainability
+- Divide calculator in different files for maintainability. 
+- Make any other improvement that adds value to a good design pattern.
