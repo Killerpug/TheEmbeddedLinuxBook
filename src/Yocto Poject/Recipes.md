@@ -92,29 +92,95 @@ It is the pathname of the work directory in which the OpenEmbedded build system 
 The WORKDIR directory is defined as:
 ``` ${TMPDIR}/work/${MULTIMACH_TARGET_SYS}/${PN}/${EXTENDPE}${PV}-${PR} ``` 
 
-## Example for recipe
+## Example for application recipe 
 For recipe file with the name:  helloworld.bb 
 ```
-DESCRIPTION = "Program that print Hello World! to standar oputput. 
-PRIORITY = "optional" 
-SECTION = "Examples" 
-LICENSE = "MIT" 
-LIC_FILES_CHKSUM = "file://${COMMON_LICENCE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302" 
-SRC_URI = "file://helloworld.c" 
-S = "${WORKDIR}" 
-do_compile() { 
-${CC} ${CFLAGS} ${LDFLAGS} helloworld.c -o helloworld 
-} 
-do_install() { 
-install -d ${D}${bindir} 
-install -m 0755 helloworld ${D}${bindir} 
-} 
+    DESCRIPTION = "Program that print Hello World! to standar oputput. 
+    PRIORITY = "optional" 
+    SECTION = "Examples" 
+    LICENSE = "MIT" 
+    LIC_FILES_CHKSUM = "file://${COMMON_LICENCE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302" 
+    SRC_URI = "file://helloworld.c" 
+    S = "${WORKDIR}" 
+    do_compile() { 
+    ${CC} ${CFLAGS} ${LDFLAGS} helloworld.c -o helloworld 
+    } 
+    do_install() { 
+    install -d ${D}${bindir} 
+    install -m 0755 helloworld ${D}${bindir} 
+    } 
 ```
 # .bbappend file
 Recipes used append Metadata to other recipes, there are called append files, these files use de .bbappend file type. This file is used to modify the recipy file, this should have the same name that the recipe, at the same time bbappend files allows your layer to make additions or changes to the content of another layer's recipe without having to copy the pther recipe into your layer.  
 Being able to append information to an existing recipe not only ovoid duplication, also automatically applies recipe changes in a different layer to your layer.
 ## Extending recipes with .bbappend files
 It is not necessary to recreate entire recipe files from cero, you can use **.bbappend** files to suppement an existing recipe file with new information, providing that the original information in the recipe file, resides in an exiting layer.
-# Add bb files into your build
+## Systemd recipes
+To use systemd services is necessary enable this in the final image, because this is not enabled by default. Add the next lines to the configuration file **local.conf** to enable systemd as default init manager.
+
+```
+DISTRO_FEATURES_append = " systemd"
+DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
+VIRTUAL-RUNTIME_init_manager = "systemd"
+VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
+```
+
+### Important varibales for systemd recipe
+1.**inherit systemd**
+Each target has a name instead of a number
+``` inherit systemd ```  
+2. NATIVE_SYSTEMD_SUPPORT = "1"
+3. **SYSTEMD_AUTO_ENABLE**  
+This variable specifies whether the specified service in SYSTEMD_SERVICE should start atomatically or not. By default, the service is enable to automatically start at boot time as follows:  
+```SYSTEMD_AUTO_ENABLE = "enable"```  
+>Note: you can disable this by setting the variable to ``` "disable"```
+4. **SYSTEMD_SERVICE**
+This variable specifies the systemd service name for a package.
+>Note:You can specify multiples services, each one separated by a space.
+```SYSTEMD_SERVICE:${PN} = "serviceName.service"```
+5. **SYSTEMD_PACKAGES**
+This variable locates the systemd unit files when they are not found in the main recipe's package.  
+By default, this variable is set such that the systemd unit files are assumed to reside inthe recipes main package:
+```SYSTEMD_PACKAGES = "${PN}"```
+6. **FILES**  
+This variable provide a package name override that identifies the resulting package, then porovide a space separated list of files or paths that identidy the files you want included as part of the resulting package:
+```FILES:${PN} += "${systemd_unitdir}/system/serviceName.service"```
+## Example for systemd service recipe 
+
+```
+SUMMARY = "Systemd example recipe"
+DESCRIPTION = "Systemd service example"
+LICENSE = "CLOSED"
+
+inherit systemd
+NATIVE_SYSTEMD_SUPPORT = "1"
+SYSTEMD_AUTO_ENABLE = "enable"
+SYSTEMD_SERVICE:${PN} = "serviceName.service"
+
+SRC_URI += "file://serviceName.service"
+
+FILES:${PN} += "${systemd_unitdir}/system/hello.service"
+
+S = "${WORKDIR}"
+
+do_install:append(){
+    # Install systemd stuff
+    install -d ${D}${systemd_unitdir}/system
+    install -m 0644 ${WORKDIR}/hello.service ${D}${systemd_unitdir}/system
+}
+```
+
+### Control systemd from command line
+   ```systemctl status```: show the status of all services
+   ```systemctl status <service>```: show the status of one service
+   ```systemctl [start|stop] <service>```: start or stop a service
+   ```systemctl [enable|disable] <service>```: enable or disable a service at boot time
+   ```systemctl list-units```: list all available units
+   ```journalctl -a```: show all logs for all services
+   ```journalctl -f```: show only the last log entries, and keep printing updates as they arrive
+   ```journalctl -u```: show only logs from a particular service
+
+
+## Add bb files into your build
 To add recipes files is necessary to modify the file **conf/local.conf** where it's iomportant to add:
 ``` IMAGE_INSTALL_append = " recipe_name.bb" ``` 
