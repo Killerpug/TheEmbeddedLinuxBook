@@ -33,21 +33,21 @@ In this variable, you specify the typoe of license you want to use for your reci
 
 However you need to provide a license file for your selected license in the next variable. If LICENCE = 'CLOSED', then you will not use de next variable.
 ### 3.1 License file
-Variable name:
-LIC_FILES_CHKSUM = 
+Variable name:  
+LIC_FILES_CHKSUM =   
 Here, is where you need to provide a licence file.
 Note: The licenses files can be found under poky in **meta/files/common-licenses/**
 ### 4. Source for build
-Variable name:
-SRC_URI = 
+Variable name:  
+SRC_URI =   
 Specify what sources files (local or remote) you want to build. 
 ### 5. Dependencies for build
-Variable name:
-DEPENDS =
+Variable name:  
+DEPENDS =  
 This are dependencies on other recipes whose contents (for example shared libraries or headers) are needed by the recipe at build time.
 ### 6. Recipe build tasks
-https://docs.yoctoproject.org/dev/ref-manual/tasks.html
-Recipies use task to complete configuring, compiling, and packaging software. A continuation will describe normal task for building a recipe.
+https://docs.yoctoproject.org/dev/ref-manual/tasks.html  
+Recipies use task to complete configuring, compiling, and packaging software. A continuation will describe normal task for building a recipe.  
 6. 1. do_build  
 6. 2. do_compile  
 6. 3. do_configure  
@@ -56,6 +56,7 @@ Recipies use task to complete configuring, compiling, and packaging software. A 
 6. 6. do_image  
 6. 7. do_install  
 6. 7. 1. do_install variables   
+
 | Sintaxis             |      Path description |
 |----------------------|-----------------------|
 | bindir               |        /usr/bin       |
@@ -73,12 +74,13 @@ Recipies use task to complete configuring, compiling, and packaging software. A 
 | systemd_system_unitdir  | 	/usr/lib/systemd/ system |
 | systemd_user_unitdir	  |     /usr/lib/systemd/user |  
 | includedir	          |     /usr/include |  
+
 6. 8. do_package  
 6. 9. do_patch  
 6. 10. do_unpack  
 ### 7. Priority of the recipe
-Variable name:
-PRIORITY =
+Variable name:  
+PRIORITY =  
 Indicates the importance of a package, this depends on the purpose for which the distribution is being produced.
 You can set:
 - "required"
@@ -86,7 +88,7 @@ You can set:
 - "extra"
 - "optional"
 ### 8. WORKDIR variable
-It is the pathname of the work directory in which the OpenEmbedded build system builds a recipe.
+It is the pathname of the work directory in which the OpenEmbedded build system builds a recipe.  
 The WORKDIR directory is defined as:
 ``` ${TMPDIR}/work/${MULTIMACH_TARGET_SYS}/${PN}/${EXTENDPE}${PV}-${PR} ``` 
 
@@ -109,10 +111,10 @@ install -m 0755 helloworld ${D}${bindir}
 } 
 ```
 # .bbappend file
-Recipes used append Metadata to other recipes, there are called append files, these files use de .bbappend file type. This file is used to modify the recipy file, this should have the same name that the recipe, at the same time bbappend files allows your layer to make additions or changes to the content of another layer's recipe without having to copy the pther recipe into your layer.
+Recipes used append Metadata to other recipes, there are called append files, these files use de .bbappend file type. This file is used to modify the recipy file, this should have the same name that the recipe, at the same time bbappend files allows your layer to make additions or changes to the content of another layer's recipe without having to copy the pther recipe into your layer.  
 Being able to append information to an existing recipe not only ovoid duplication, also automatically applies recipe changes in a different layer to your layer.
 ## Extending recipes with .bbappend files
-It is not necessary to recreate entire recipe files from cero, you can use **.bbappend** files to suppement an existing recipe file with new information, providing that the original information in the recipe file, resides in an exiting layer
+It is not necessary to recreate entire recipe files from cero, you can use **.bbappend** files to suppement an existing recipe file with new information, providing that the original information in the recipe file, resides in an exiting layer.
 # Add bb files into your build
 To add recipes files is necessary to modify the file **conf/local.conf** where it's iomportant to add:
 ``` IMAGE_INSTALL_append = " recipe_name.bb" ``` 

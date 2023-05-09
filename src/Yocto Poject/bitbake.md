@@ -7,6 +7,8 @@ This contain information abot a specific software component, and the task instru
 Information that is important to share between diferents recipes, for example autotools.  
 3. Configurations (.conf)  
 Define diferent variables of configuration that control what will do the build image (for example poky), this could include machine specifications, distribution configurations, compiler settings, and user configurations.  
+## Executing Taks
+Bitbake executes task according to the provided metadata, which is stored in recipe (.bb) and related recipe (.bbappend), configuration files(.conf) and underlying include (.inc), and in class (.bbclass) files. The metadata provides Bitbake with instructions on what task to run and the dependencies between those tasks.
 ## Layers
 https://docs.yoctoproject.org/dev/overview-manual/yp-intro.html#the-yocto-project-layer-model
 
@@ -31,10 +33,14 @@ Used to mantain policies related to your platform project distribution.
 ![Distro-specific](./pictures/layer_distro.png)
 
 ## Bitbake-layers
-* **bitbake-layers create-layer**
+* **bitbake-layers create-layer**  
 This command allow us to create a new layer with the correr path for recipes.
-* **bitbake-layers add-layer**
+* **bitbake-layers add-layer**  
 This command allows us to add the desired layer by specifying ath the end of the command, for example: ```bitbake-layers add-layer meta-example```.
-* **bitbake-layers show-layers**
+* **bitbake-layers show-layers**  
 This command allow us to check what layers are added on our configuration file for bblayer (you can find this file on your build folder inside of the conf folder).
 
+## Execution
+The main propuse for running Bitbake is to produce some kind of output such as a single installable package, kernel, software development kit, or even a full board-specific bootable Linux image.
+Also you can execute bitbake command with diferents options, for example: to compile single recipe, capture or clear data, or simply return information about execution environment.
+>Note: Before execute Bitbake, you should check your configuration file **local.conf**, to corroborate some specific varibales that could cause some damage in your build if these dont have a well definition.
