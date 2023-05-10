@@ -171,14 +171,14 @@ do_install:append(){
 ```
 
 ### Control systemd from command line
-   ```systemctl status```: show the status of all services
-   ```systemctl status <service>```: show the status of one service
-   ```systemctl [start|stop] <service>```: start or stop a service
-   ```systemctl [enable|disable] <service>```: enable or disable a service at boot time
-   ```systemctl list-units```: list all available units
-   ```journalctl -a```: show all logs for all services
-   ```journalctl -f```: show only the last log entries, and keep printing updates as they arrive
-   ```journalctl -u```: show only logs from a particular service
+   ```systemctl status```: show the status of all services.  
+   ```systemctl status <service>```: show the status of one service.  
+   ```systemctl [start|stop] <service>```: start or stop a service.  
+   ```systemctl [enable|disable] <service>```: enable or disable a service at boot time.  
+   ```systemctl list-units```: list all available units.  
+   ```journalctl -a```: show all logs for all services.  
+   ```journalctl -f```: show only the last log entries, and keep printing updates as they arrive.  
+   ```journalctl -u```: show only logs from a particular service.  
 
 
 ## Add bb files into your build
