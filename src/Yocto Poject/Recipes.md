@@ -127,7 +127,7 @@ VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 
 ### Important varibales for systemd recipe
 1.**inherit systemd**
-Each target has a name instead of a number
+Each target has a name instead of a number, ensure the recipe inherits from the systemd class:  
 ``` inherit systemd ```  
 2. NATIVE_SYSTEMD_SUPPORT = "1"
 3. **SYSTEMD_AUTO_ENABLE**  
