@@ -2,7 +2,7 @@
 Official page: https://docs.yoctoproject.org/overview-manual/concepts.html#recipies
 
 ## Recipes files
-Recipies files or also known as bb files, are files that contain information and instructions that build tool (bitbake) takes for generate the packages. This informations for instructions can be resume as:
+Recipe files or also known as BB files, are files that contain information and instructions that build tool (bitbake) takes for generating the packages. This information for instructions can be resumed as:
 1. Descriptive information about package
 2. Section information
 2. The recipe version
@@ -21,33 +21,33 @@ The variable contains a string value that should provide a package description t
 ### 2. Section
 Variable name:
 - SECTION = 
-Here you will difine what type of recipe it is, the section in wich packages should be categorized, it could be: utilities, applications, graphics, kernel, etc.
+Here you will define what type of recipe it is, the section in which packages should be categorized, it could be: utilities, applications, graphics, kernel, etc.
 ### 3. License
 Variable name:  
-LICENCE =   
-In this variable, you specify the typoe of license you want to use for your recipe for example:
+- LICENCE =   
+In this variable, you specify the type of license you want to use for your recipe for example:
 
 - MIT
 - BSD
 - GPL  
 
-However you need to provide a license file for your selected license in the next variable. If LICENCE = 'CLOSED', then you will not use de next variable.
+However, you need to provide a license file for your selected licensee in the next variable. If LICENCE = 'CLOSED', then you will not use the next variable.
 ### 3.1 License file
 Variable name:  
-LIC_FILES_CHKSUM =   
+- LIC_FILES_CHKSUM =   
 Here, is where you need to provide a licence file.
-Note: The licenses files can be found under poky in **meta/files/common-licenses/**
+Note: The license files can be found under poky in **meta/files/common-licenses/**
 ### 4. Source for build
 Variable name:  
-SRC_URI =   
+- SRC_URI =   
 Specify what sources files (local or remote) you want to build. 
 ### 5. Dependencies for build
 Variable name:  
-DEPENDS =  
+- DEPENDS =  
 This are dependencies on other recipes whose contents (for example shared libraries or headers) are needed by the recipe at build time.
 ### 6. Recipe build tasks
 https://docs.yoctoproject.org/dev/ref-manual/tasks.html  
-Recipies use task to complete configuring, compiling, and packaging software. A continuation will describe normal task for building a recipe.  
+The recipes use task to complete configuring, compiling, and packaging software. A continuation will describe the normal task of building a recipe.   
 6. 1. do_build  
 6. 2. do_compile  
 6. 3. do_configure  
@@ -80,7 +80,7 @@ Recipies use task to complete configuring, compiling, and packaging software. A 
 6. 10. do_unpack  
 ### 7. Priority of the recipe
 Variable name:  
-PRIORITY =  
+- PRIORITY =  
 Indicates the importance of a package, this depends on the purpose for which the distribution is being produced.
 You can set:
 - "required"
@@ -111,12 +111,12 @@ For recipe file with the name:  helloworld.bb
     } 
 ```
 # .bbappend file
-Recipes used append Metadata to other recipes, there are called append files, these files use de .bbappend file type. This file is used to modify the recipy file, this should have the same name that the recipe, at the same time bbappend files allows your layer to make additions or changes to the content of another layer's recipe without having to copy the pther recipe into your layer.  
-Being able to append information to an existing recipe not only ovoid duplication, also automatically applies recipe changes in a different layer to your layer.
+Recipes used to append Metadata to other recipes, there are calls append files, these files use the .bbappend file type. This file is used to modify the recipe file, this should have the same name that the recipe, at the same time bbappend files allow your layer to make additions or changes to the content of another layer's recipe without having to copy the other recipe into your layer.  
+Being able to append information to an existing recipe not only avoid duplication, also automatically applies recipe changes in a different layer to your layer.
 ## Extending recipes with .bbappend files
-It is not necessary to recreate entire recipe files from cero, you can use **.bbappend** files to suppement an existing recipe file with new information, providing that the original information in the recipe file, resides in an exiting layer.
+It is not necessary to recreate entire recipe files from scratch,  you can use **. bbappend** files to supplement an existing recipe file with new information, providing that the original information in the recipe file, resides in an existing layer.
 ## Systemd recipes
-To use systemd services is necessary enable this in the final image, because this is not enabled by default. Add the next lines to the configuration file **local.conf** to enable systemd as default init manager.
+To use systemd services has necessary enabled this in the final image, because this is not enabled by default. Add the next lines to the configuration file **local. conf** to enable system as a default unit manager.
 
 ```
 DISTRO_FEATURES_append = " systemd"
@@ -131,7 +131,7 @@ Each target has a name instead of a number, ensure the recipe inherits from the 
 ``` inherit systemd ```  
 2. NATIVE_SYSTEMD_SUPPORT = "1"
 3. **SYSTEMD_AUTO_ENABLE**  
-This variable specifies whether the specified service in SYSTEMD_SERVICE should start atomatically or not. By default, the service is enable to automatically start at boot time as follows:  
+This variable specifies whether the specified service in SYSTEMD_SERVICE should start automatically or not. By default, the service is enabled to automatically start at boot time as follows: 
 ```SYSTEMD_AUTO_ENABLE = "enable"```  
 >Note: you can disable this by setting the variable to ``` "disable"```
 4. **SYSTEMD_SERVICE**
@@ -140,10 +140,10 @@ This variable specifies the systemd service name for a package.
 ```SYSTEMD_SERVICE:${PN} = "serviceName.service"```
 5. **SYSTEMD_PACKAGES**
 This variable locates the systemd unit files when they are not found in the main recipe's package.  
-By default, this variable is set such that the systemd unit files are assumed to reside inthe recipes main package:
+By default, this variable is set such that the systemd unit files are assumed to reside in the recipes main package:
 ```SYSTEMD_PACKAGES = "${PN}"```
 6. **FILES**  
-This variable provide a package name override that identifies the resulting package, then porovide a space separated list of files or paths that identidy the files you want included as part of the resulting package:
+This variable provides a package name override that identifies the resulting package, then provide a space separated list of files or paths that identify the files you want included as part of the resulting package:
 ```FILES:${PN} += "${systemd_unitdir}/system/serviceName.service"```
 ## Example for systemd service recipe 
 
@@ -182,5 +182,5 @@ do_install:append(){
 
 
 ## Add bb files into your build
-To add recipes files is necessary to modify the file **conf/local.conf** where it's iomportant to add:
-``` IMAGE_INSTALL_append = " recipe_name.bb" ``` 
+To add recipes files is necessary to modify the file **conf/local. conf** where it's important to add:
+``` IMAGE_INSTALL_append = " recipe_name" ``` 
