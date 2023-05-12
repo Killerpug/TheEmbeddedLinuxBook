@@ -2,10 +2,10 @@
 Official documentation: https://docs.yoctoproject.org/sdk-manual/extensible.html  
 
 This command-line tool provides a number of features that help you build, test, and package software working with yocto.  
-The ```devtool``` command line is organized similary to GIT, where it has a number of sub-commands for each fuction. 
+The ```devtool``` command line is organized similarly to GIT, where it has a number of sub-commands for each function. 
 You can run ```devtool --help``` to see all the commands.
 ## Workspace and extensible SDK
-To work with ```devtool``` command-line it is needed use a "Workspace" layer in which to accomplihs build. This layer is not specific to any single devtool command but is rather a common working area used across the tool.
+To work with ```devtool``` command-line it is needed use a "Workspace" layer in which to accomplish build. This layer is not specific to any single devtool command but is rather a common working area used across the tool.
 
 ![Workspace_devtool](./pictures/workspace_devtool.png)
 
@@ -40,7 +40,7 @@ To work with ```devtool``` command-line it is needed use a "Workspace" layer in 
 Assits in adding new software to be built.  
 1. Add application  
 Generates a new recipe based on existing source code, it is flexible enough to allow you to extract source code into both the workspace or separate local Git repository.  
-1.1 Generate the new recipe: ```devtool add recipe example``` .
+1.1 Generate the new recipe: ```devtool add recipe example``` .  
 1.2 Edit the recipe: ```devtool edit-recipe example```.  
 1.3 Build the recipe: ```devtool build example```  
 1.4 Rebuild the image: ```devtool build-image image_example```  
