@@ -12,10 +12,14 @@ jobs:
       - name: Check for broken links with lychee
         uses: lycheeverse/lychee-action@v1.7.0
         with:
-          args: 'src'
+        # perform checking on all src directory
+          args: '--verbose src'
           fail: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+  spellChecker:
+    runs-on: ubuntu-latest
+    steps:
       - name: Syntax checker installation
         run: sudo apt-get install aspell
       - name: Install shellcheck
