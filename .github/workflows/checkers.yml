@@ -28,4 +28,4 @@ jobs:
         # print summary of spellchecker
       - if: failure() 
         run: |
-        echo ":rocket:Please correct spelling, check spellchecker log for detailed info on incorrect words" >> $GITHUB_STEP_SUMMARY
+        echo "Please correct spelling, check spellchecker log for detailed info on incorrect words" >> $GITHUB_STEP_SUMMARY
