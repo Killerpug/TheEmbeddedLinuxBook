@@ -2,7 +2,7 @@
 ## What is git?
 The first thing you will hear about git is that "Git is a distributed version control system" so lets start by understanding what is a Version Control Systems(VCS).
 
-A Version Control System records changes to a file or set of files over time so that you have a history of them. An example of a VCS that you most likely already use is Word, Word has built-in feature "track changes" that allows us to visualize differences between 2 file versions; althought hopefully by now you know that Word is rather slow and only works for its own files, so here we will see a faster and optimized tool for multiple file types. In contrast, a well designed VCS has the following features: 
+A Version Control System records changes to a file or set of files over time so that you have a history of them. An example of a VCS that you most likely already use is Word, Word has built-in feature "track changes" that allows us to visualize differences between 2 file versions; although hopefully by now you know that Word is rather slow and only works for its own files, so here we will see a faster and optimized tool for multiple file types. In contrast, a well designed VCS has the following features: 
 - Revert selected files back to a previous state, or even the entire project back to a previous state.
 - Compare changes between any 2 versions.
 - See who last modified something that might be causing a problem, who introduced an issue,
@@ -37,5 +37,6 @@ Branching means you diverge from the main line of development and continue to do
 ## Reading more
 To understand more about git its recommended to read the [official book](https://git-scm.com/book/en/v2).
 
+https://git-scm.cbrokenlinkm/book/en/v2 
 To practice branching my personal recommendation is this website: [learn git branching](https://learngitbranching.js.org/) 
 

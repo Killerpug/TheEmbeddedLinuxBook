@@ -1,0 +1,27 @@
+name: Links (Fail Fast)
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Check for broken links with lychee
+        uses: lycheeverse/lychee-action@v1.7.0
+        with:
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: Syntax checker installation
+        run: |
+        sudo apt-get install aspell
+        sudo apt-get install shellcheck
+      - name: Shellcheck
+        run: find . -name '*.sh' | xargs shellcheck
+      - name: Spellcheck
+        run: bash tools/spellcheck.sh list
+

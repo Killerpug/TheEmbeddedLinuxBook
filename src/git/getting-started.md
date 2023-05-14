@@ -1,6 +1,6 @@
 # Getting started
 ## Setting up a repository
-There are many ways to install git for windows, and many GUIs... but the most basic is to download git directly from Git website: https://git-scm.com/download/win. 
+There are many ways to install git for windows, and many GUI's... but the most basic is to download git directly from Git website: https://git-scm.com/download/win. 
 
 As for Linux, you can just download the package from package manager:
 ``` sudo apt-get git```
@@ -21,7 +21,7 @@ Lets play!!! Try to add or modify a couple of files and store those changes in y
 
     - -s or --short, get simplified output of the state of files
 - **git add** → is a multipurpose command — you use it to begin tracking new files, to stage
-files, and to do other things like marking merge-conflicted files as resolved. It may be helpfulto think of it more as “add precisely this content to the next commit”.
+files, and to do other things like marking merge-conflicted files as resolved. It may be helpful to think of it more as “add precisely this content to the next commit”.
     - -A stages all changes stages new files and modifications, without deletions
     - -u stages modifications and deletions, without new files
 - **git commit** → saves the changes made(staged files) into the local repository.

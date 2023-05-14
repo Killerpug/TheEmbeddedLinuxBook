@@ -2,7 +2,7 @@
 
 With the commands mentioned in the past pages we can start working on our first versioned project.
 Now assume you found an interesting code for a simple calculator(calculator.c).
-Note: Remember to compile it as $gcc calculator.c -o executableName
+Note: Remember to compile it as $gcc calculator.c -o executable-Name
 ```
     #include <stdio.h>
 
