@@ -37,6 +37,5 @@ Branching means you diverge from the main line of development and continue to do
 ## Reading more
 To understand more about git its recommended to read the [official book](https://git-scm.com/book/en/v2).
 
-https://git-scm.cbrokenlinkm/book/en/v2 
 To practice branching my personal recommendation is this website: [learn git branching](https://learngitbranching.js.org/) 
 
