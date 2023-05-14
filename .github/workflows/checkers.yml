@@ -27,4 +27,5 @@ jobs:
         run: bash tools/spellcheck.sh list 
         # print summary of spellchecker
       - if: failure() 
-        run: echo ":memo: Please correct spelling, check spellchecker log for detailed info on incorrect words" >> $GITHUB_STEP_SUMMARY
+        run: |
+        echo " :memo: Please correct spelling, check spellchecker log for detailed info on incorrect words" >> $GITHUB_STEP_SUMMARY
