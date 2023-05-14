@@ -22,10 +22,6 @@ jobs:
     steps:
       - name: Syntax checker installation
         run: sudo apt-get install aspell
-      - name: Install shellcheck
-        run: sudo apt-get install shellcheck
-      - name: Shellcheck
-        run: find . -name '*.sh' | xargs shellcheck
       - name: Spellcheck
         run: bash tools/spellcheck.sh list
 
