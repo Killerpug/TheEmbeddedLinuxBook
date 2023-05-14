@@ -39,3 +39,16 @@ You are all set!
     mdbook serve
 ``` 
 Now book is deployed locally at URL http://localhost:3000.
+
+## Checking spelling
+We use aspell for checking word sytax and lychee to look for broken links. Install and perform checking before PR, otherwise spellChecker or linkChecker actions will fail.
+
+### Installing checker tools
+```
+    sudo apt-get install aspell
+    cargo install lychee
+```
+
+### Check your text 
+lychee ./src/**/*.md            -> look for broken links
+bash tools/spellcheck.sh list   -> look for misspelled words

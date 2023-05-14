@@ -25,4 +25,6 @@ jobs:
         run: sudo apt-get install aspell
       - name: Spellcheck
         run: bash tools/spellcheck.sh list 
-
+        # print summary of spellchecker
+      - if: failure() 
+        run: echo "please correct spelling, check spellchecker log for detailed log of incorrect words"
