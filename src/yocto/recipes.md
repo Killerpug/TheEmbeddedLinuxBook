@@ -1,19 +1,20 @@
 # Recipes
 Official page: https://docs.yoctoproject.org/overview-manual/concepts.html#recipies
-
+[//]:# ("This information for instructions can be resumed as:" is not concise, shorten it)
 ## Recipes files
 Recipe files or also known as BB files, are files that contain information and instructions that build tool (bitbake) takes for generating the packages. This information for instructions can be resumed as:
 1. Descriptive information about package
 2. Section information
-2. The recipe version
-3. The Licience
-3. Existing dependencies 
-4. Where the source code resides and how to fetch it 
-5. Whether the source code requires any patches, where to find them, and how to apply them.
-6. How to configure and compile the source code.
-7. Where on the target machine to install the package or packages created.
+3. The recipe version
+4. The Licience
+5. Existing dependencies 
+6. Where the source code resides and how to fetch it 
+7. Whether the source code requires any patches, where to find them, and how to apply them.
+8. How to configure and compile the source code.
+9. Where on the target machine to install the package or packages created.
 ## Variables for bb files
 https://docs.yoctoproject.org/dev/ref-manual/variables.html
+[//]:# (If you put a link then maybe instead only setup an example, we try to have as little redundant as possible on topics that are well explain in yocto. Then just complement information.) 
 ### 1. Description
 Variable name:
 - DESCRIPTION = 
@@ -48,14 +49,18 @@ This are dependencies on other recipes whose contents (for example shared librar
 ### 6. Recipe build tasks
 https://docs.yoctoproject.org/dev/ref-manual/tasks.html  
 The recipes use task to complete configuring, compiling, and packaging software. A continuation will describe the normal task of building a recipe.   
-6. 1. do_build  
-6. 2. do_compile  
-6. 3. do_configure  
-6. 4. do_deploy  
-6. 5. do_fetch  
-6. 6. do_image  
-6. 7. do_install  
-6. 7. 1. do_install variables   
+    - do_build  
+    - do_compile  
+    - do_configure  
+    - do_deploy  
+    - do_fetch  
+    - do_image  
+    - do_install  
+    - do_package  
+    - do_patch  
+    - do_unpack  
+
+#### 6.1 do_install variables   
 
 | Sintaxis             |      Path description |
 |----------------------|-----------------------|
@@ -75,9 +80,6 @@ The recipes use task to complete configuring, compiling, and packaging software.
 | systemd_user_unitdir	  |     /usr/lib/systemd/user |  
 | includedir	          |     /usr/include |  
 
-6. 8. do_package  
-6. 9. do_patch  
-6. 10. do_unpack  
 ### 7. Priority of the recipe
 Variable name:  
 - PRIORITY =  
@@ -124,7 +126,7 @@ DISTRO_FEATURES_BACKFILL_CONSIDERED += "sysvinit"
 VIRTUAL-RUNTIME_init_manager = "systemd"
 VIRTUAL-RUNTIME_initscripts = "systemd-compat-units"
 ```
-
+[//]: # (this section is too cryptic, try to be more direct and clear with your explanation)
 ### Important varibales for systemd recipe
 1.**inherit systemd**
 Each target has a name instead of a number, ensure the recipe inherits from the systemd class:  
@@ -146,7 +148,7 @@ By default, this variable is set such that the systemd unit files are assumed to
 This variable provides a package name override that identifies the resulting package, then provide a space separated list of files or paths that identify the files you want included as part of the resulting package:
 ```FILES:${PN} += "${systemd_unitdir}/system/serviceName.service"```
 ## Example for systemd service recipe 
-
+[//]: # (In general examples work better to explain things, but an example is not complete without an explanation)
 ```
 SUMMARY = "Systemd example recipe"
 DESCRIPTION = "Systemd service example"
