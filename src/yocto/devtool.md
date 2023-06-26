@@ -1,5 +1,5 @@
 # Devtool 
-Official documentation: https://docs.yoctoproject.org/sdk-manual/extensible.html  
+Official documentation: [Devtool](https://docs.yoctoproject.org/sdk-manual/extensible.html)  
 
 This command-line tool provides a number of features that help you build, test, and package software working with yocto.  
 The ```devtool``` command line is organized similarly to GIT, where it has a number of sub-commands for each function. 

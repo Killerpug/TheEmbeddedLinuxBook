@@ -5,6 +5,7 @@
     - [Getting started](./git/getting-started.md)
     - [Activity](./git/activity1.md)
 - [Yocto Project](./yocto/fundamental.md)
+    - [Yocto Introduction](./yocto/yocto-introduction.md)
     - [Getting started](./yocto/getting-started.md)
     - [Recipes](./yocto/recipes.md)
     - [Configuration files](./yocto/config.md)

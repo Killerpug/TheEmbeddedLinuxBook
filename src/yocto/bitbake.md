@@ -10,7 +10,7 @@ Define different variables of configuration that control what will do the build 
 ## Executing Taks
 Bitbake executes task according to the provided metadata, which is stored in recipe (.bb) and related recipe (.bbappend), configuration files(.conf) and underlying include (.inc), and in class (.bbclass) files. The metadata provides Bitbake with instructions on what task to run and the dependencies between those tasks.
 ## Layers
-https://docs.yoctoproject.org/dev/overview-manual/yp-intro.html#the-yocto-project-layer-model
+[Layer Model](https://docs.yoctoproject.org/dev/overview-manual/yp-intro.html#the-yocto-project-layer-model)
 
 Bitbake can combine all of these files in what is denominated as **layer**.  
 A layer is a group of reusable components and recipes that are reusable in similar circumstances, for example, a user interface (UI) layer or a database layer. Each of these can be implemented by different development teams without affecting others layers functionality.  

@@ -1,4 +1,4 @@
-# Getting started
+# Yocto Introduction
 More information can be found on the official project website:
 [Yocto Official Documentation](https://www.yoctoproject.org/).
 ## What is Yocto?
@@ -26,7 +26,7 @@ The integration of the OpenEmbedded tools and the Yocto components make up the *
 ## To develop software
 For adding a single executable file, a toolchain, source files and instructions to compile are sufficient. However, for entire projects that we need dependencies to compile and run, this becomes more complex and we will need additional steps that will form a whole recipe from which variants could be derived depending on the target hardware architecture.
 To interpret and execute these recipes we will use a Bitbake tool.
-[//]:# (This start goes into getting started, be sure to write a more detailed tutorial/steps)
+
 ## Start with Yocto
 The first thing to do is to initialize a new environment within the project and edit the **conf/local. conf** file in which we can choose the target hardware by means of the **MACHINE** variable before compiling the project by means of bitbake.
 Unlike similar projects Yocto stands out in the ease of adding new recipes or modify existing ones, for this we use recipe files that usually with the extension **. bb** (hello. bb), and to add something to this recipe we use the extension **. bbappend** keeping the name of the original file (hello. bbappend).

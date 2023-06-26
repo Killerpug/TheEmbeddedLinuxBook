@@ -13,7 +13,7 @@ Recipe files or also known as BB files, are files that contain information and i
 8. How to configure and compile the source code.
 9. Where on the target machine to install the package or packages created.
 ## Variables for bb files
-https://docs.yoctoproject.org/dev/ref-manual/variables.html
+[Variables](https://docs.yoctoproject.org/dev/ref-manual/variables.html).
 [//]:# (If you put a link then maybe instead only setup an example, we try to have as little redundant as possible on topics that are well explain in yocto. Then just complement information.) 
 ### 1. Description
 Variable name:
@@ -47,7 +47,7 @@ Variable name:
 - DEPENDS =  
 This are dependencies on other recipes whose contents (for example shared libraries or headers) are needed by the recipe at build time.
 ### 6. Recipe build tasks
-https://docs.yoctoproject.org/dev/ref-manual/tasks.html  
+[Build task](https://docs.yoctoproject.org/dev/ref-manual/tasks.html)  
 The recipes use task to complete configuring, compiling, and packaging software. A continuation will describe the normal task of building a recipe.   
     - do_build  
     - do_compile  
