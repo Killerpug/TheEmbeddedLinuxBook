@@ -11,7 +11,7 @@
 - [Repo Tool](./4-repo/1-Intallation_commands_manifest_branch.md)
 - [The Linux system](./5-linux/linux-fundamental.md)
 - [Automotive](./6-automotive/automotive.md)
-    - [CAN](./6-automotive/CAN/fundamental.md)
+    - [CAN](./6-automotive/CAN/can.md)
     - [SW Design](./6-automotive/SW_Design/sw_design.md)
     - [SW Guidelines](./6-automotive/SW_Guidelines/sw_guidelines.md)
 - [AGL Project](./7-agl_project/AGL_Project.md)
