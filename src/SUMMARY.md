@@ -12,3 +12,8 @@
 - [Repo Manifest](./4-repo/2-Manifest.md)
 - [Repo Create Own Branch](./4-repo/3-Branch_AGL.md)
 - [The Linux system](./5-linux/linux-fundamental.md)
+- [Automotive](./6-automotive/automotive.md)
+    - [CAN](./6-automotive/CAN/fundamental.md)
+    - [SW Design](./6-automotive/SW_Design/sw_design.md)
+    - [SW Guidelines](./6-automotive/SW_Guidelines/sw_guidelines.md)
+- [AGL Project](./7-agl_project/AGL_Project.md)
