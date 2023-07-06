@@ -4,60 +4,62 @@ Repo is a tool built on top of Git. Repo helps manage many Git repositories, doe
 
 
 Installation commands: 
+```
+mkdir -p ~/.bin
+PATH+=:~/bin
+curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
+chmod a+rx ~/.bin/repo
+echo 'PATH+=:~/bin' >> ~/.bashrc
+```
 
-	 mkdir -p ~/.bin
- PATH+=:~/bin
- curl https://storage.googleapis.com/git-repo-downloads/repo > ~/.bin/repo
- chmod a+rx ~/.bin/repo
-	echo 'PATH+=:~/bin' >> ~/.bashrc
-
-
-See complete information here https://android.googlesource.com/tools/repo
+See complete information in [official page](https://android.googlesource.com/tools/repo). 
 
 
 Time to create our own repository 
 
-
-	repo init  -u https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo
+```repo init  -u https://gerrit.automotivelinux.org/gerrit/AGL/AGL-repo```
 
 Enter in manifest folder
 
-	cd manifests
+```
+cd manifests
 
-	git brnach -a
-	
-	git checkout -b UniTestBranch
-	
-	Ls
-	
-	touch unitest.xml
-	
-	Ls
-	
+git branch -a
+
+git checkout -b UniTestBranch
+
+la
+
+touch unitest.xml
+
+ls
+```
+
 Create commit and be ready to push
 	
-	From GitHub create a empty repository 
-		![Alt text](./media/mage.png)
+From GitHub create a empty repository 
+
+![Alt text](./media/image.png)
 	
 	
-		![Alt text](./media/mage-1.png)
+![Alt text](./media/image-1.png)
 	
 
 
-		![Alt text](./media/mage-2.png)
+![Alt text](./media/image-2.png)
 
-		
-		
-	git push --all -u https://github.com/C4rloS0t0/UnitOwnRepoBranch.git
-	
+
+```	
+git push --all -u https://github.com/C4rloS0t0/UnitOwnRepoBranch.git
+```
 
 A repo manifest describes the structure of a repo client; that is the directories that are visible and where they should be obtained from with git.
 The basic structure of a manifest is a bare Git repository holding a single default.xml XML file in the top level directory.
 Manifests are inherently version controlled, since they are kept within a Git repository. Updates to manifests are automatically obtained by clients during repo sync.
 
-See more details in https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.md
+[See more details](https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.md)
 
-	![Manifest](./media/mage-3.png)
+![Manifest](./media/mage-3.png)
 
 
 In Git, a branch is a new/separate version of the main repository.
@@ -120,5 +122,5 @@ From <https://wladimir-tm4pda.github.io/source/git-repo.html>
 https://wladimir-tm4pda.github.io/source/git-repo.html#:~:text=Repo%20command%20reference
 
 
-	![Branch](./media/mage-4.png)
+![Branch](./media/image-4.png)
 
