@@ -2,10 +2,10 @@
 
 > The Windows Subsystem for Linux lets developers run a GNU/Linux environment -- including most command-line tools, utilities, and applications -- directly on Windows, unmodified, without the overhead of a virtual machine 
 or dualboot setup.
->> See complete overview <https://learn.microsoft.com/en-us/windows/wsl/about> 
+>> See complete overview [WSL](https://learn.microsoft.com/en-us/windows/wsl/about) 
 
 
-## Why WSL for VCU
+## Why WSL
 
 WSL is a easy way to learn, undertand and develop on linux without any need to spend time installing linux (Any distribution) in your machine, the process to intall and use is simple and you can use most of the machine resources like complete CPUs and threads, 80% of RAM, share files and tools between windows and Linux.  
 
@@ -14,7 +14,7 @@ Not all is possible in this life easy intallation vs performace What you prefer?
 
 By the moment we chose WSL for start point and you will see the easy way to start to work in Linux following the steps described in next chapters.
 	
-## Start with WSL OSD
+## Start with WSL
 	
 WSL have 2 different versions WSL1 and WSL2 we will use WSL2  as is version already tested for the project we will use in future. 
 
