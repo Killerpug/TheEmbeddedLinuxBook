@@ -20,4 +20,6 @@
     - [Configuration files](./7-yocto-project/config.md)
     - [Bitbake](./7-yocto-project/bitbake.md)
     - [Devtool](./7-yocto-project/devtool.md)
-- [AGL Project](./8-agl-project/agl-project.md)
+- [AGL Project](./8-agl-project/1-agl-project.md)
+- [AGL Virtual CAN](./8-agl-project/10-agl-qemu-virtualcan.md)
+
