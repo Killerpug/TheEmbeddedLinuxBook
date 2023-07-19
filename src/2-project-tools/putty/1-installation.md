@@ -3,8 +3,8 @@ PuTTY is a free and open-source terminal emulator, serial console and network fi
 
 ## Putty installation 
 
-1. Download from [https://www.putty.org/](https://www.putty.org)
+1. Download from [Putty Website](https://www.putty.org) and follow isntallation steps. 
 
 	
-2. Open Putty looks like this, we will use ii once we have first project demo build. 
+2. Once you complte the nitallation open Putty and will looks like below image, we will use it once we runs first project demo. 
 ![Putty Main page](./media/image-3.png)
