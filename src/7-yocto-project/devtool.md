@@ -7,7 +7,7 @@ You can run ```devtool --help``` to see all the commands.
 ## Workspace and extensible SDK
 To work with ```devtool``` command-line it is needed use a "Workspace" layer in which to accomplish build. This layer is not specific to any single devtool command but is rather a common working area used across the tool.
 
-![Workspace_devtool](./pictures/workspace_devtool.png)
+![Workspace_devtool](./media/workspace_devtool.png)
 
 > attic - A directory created if devtool believes it must preserve
         anything when you run "devtool reset".  For example, if you

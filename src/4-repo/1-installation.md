@@ -1,6 +1,6 @@
 DRAFT
 
-Repo is a tool built on top of Git. Repo helps manage many Git repositories, does the uploads to revision control systems, and automates parts of the development workflow. Repo is not meant to replace Git, only to make it easier to work with Git. The repo command is an executable Python script that you can put anywhere in your path.
+> Repo is a tool built on top of Git. Repo helps manage many Git repositories, does the uploads to revision control systems, and automates parts of the development workflow. Repo is not meant to replace Git, only to make it easier to work with Git. The repo command is an executable Python script that you can put anywhere in your path.
 
 
 Installation commands: 
@@ -12,7 +12,7 @@ chmod a+rx ~/.bin/repo
 echo 'PATH+=:~/bin' >> ~/.bashrc
 ```
 
-See complete information in [official page](https://android.googlesource.com/tools/repo). 
+>> See complete information in [official page](https://android.googlesource.com/tools/repo). 
 
 
 Time to create our own repository 
@@ -39,14 +39,14 @@ Create commit and be ready to push
 	
 From GitHub create a empty repository 
 
-![Alt text](./media/image.png)
+>>> ![Alt text](./media/image.png)
 	
 	
-![Alt text](./media/image-1.png)
+>>>> ![Alt text](./media/image-1.png)
 	
 
 
-![Alt text](./media/image-2.png)
+>>>>>> ![Alt text](./media/image-2.png)
 
 
 ```	
@@ -59,7 +59,7 @@ Manifests are inherently version controlled, since they are kept within a Git re
 
 [See more details](https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.md)
 
-![Manifest](./media/mage-3.png)
+![Manifest](./media/image-3.png)
 
 
 In Git, a branch is a new/separate version of the main repository.

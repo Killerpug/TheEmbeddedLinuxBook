@@ -1,1 +1,0 @@
-AGL project require a set of tools to Complile, Emulate, Debugg and Develop, this section guide with the first Installation required to start to work with AGL Project. 

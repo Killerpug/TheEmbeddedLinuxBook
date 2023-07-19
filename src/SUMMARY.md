@@ -1,10 +1,10 @@
 # Summary
 
-- [Book Introduction](./1-book_introduction/agl-project.md)
-- [Project Tools](./2-project_tools/project_tool.md)
-    - [WSL](./2-project_tools/wsl/1-installation.md)
-    - [Virtual box](./2-project_tools/virtual-box/1-installation.md)
-    - [Putty](./2-project_tools/putty/1-installation.md)
+- [Book Introduction](./1-book-introduction/agl-project.md)
+- [Project Tools](./2-project-tools/project_tool.md)
+    - [WSL](./2-project-tools/wsl/1-installation.md)
+    - [Virtual box](./2-project-tools/virtual-box/1-installation.md)
+    - [Putty](./2-project-tools/putty/1-installation.md)
 - [Git](./3-git/fundamental.md)
     - [Getting started](./3-git/getting-started.md)
     - [Activity](./3-git/activity-01.md)

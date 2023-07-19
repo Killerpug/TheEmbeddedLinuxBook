@@ -20,17 +20,17 @@ Layers all have a similar structure, these could include additional directories 
 ### 1. Application-specific
 Commonly used to manage applications and packages, and share the next structure:
 
-![Application-specific](./pictures/layer_app.png)
+![Application-specific](./media/layer_app.png)
 
 ### 2. Machine-specific
 Used to maintain BSP and kernel-related modifications and requirements.  
 
-![Machine-specific](./pictures/layer-machine.png)
+![Machine-specific](./media/layer-machine.png)
 
 ### 3. Distribution-specific
 Used to maintain policies related to your platform project distribution.  
 
-![Distro-specific](./pictures/layer_distro.png)
+![Distro-specific](./media/layer_distro.png)
 
 ## Bitbake-layers
 * **bitbake-layers create-layer**  
