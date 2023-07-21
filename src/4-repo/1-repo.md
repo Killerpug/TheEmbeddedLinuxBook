@@ -7,11 +7,10 @@ Repo is a tool built on top of Git, Repo helps manage many Git repositories, doe
 
 Repo use an artifactory to crate a repo project defining the folder structure and the different git repositiries and it specific version used by this project, this artifactory is called repo manifest 
 
-![Manifest](./media/image-3.png)
+![Manifest](./media/image-3b.png)
 
 A repo manifest describes the structure of a repo client; that is the directories that are visible and where they should be obtained from with git.
 The basic structure of a manifest is a bare Git repository holding a single default.xml XML file in the top level directory.
 Manifests are inherently version controlled, since they are kept within a Git repository. Updates to manifests are automatically obtained by clients during repo sync.
 
 [See more details](https://gerrit.googlesource.com/git-repo/+/master/docs/manifest-format.md)
-
