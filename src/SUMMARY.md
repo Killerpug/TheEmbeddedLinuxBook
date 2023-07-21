@@ -8,7 +8,7 @@
 - [Git](./3-git/fundamental.md)
     - [Getting started](./3-git/getting-started.md)
     - [Activity](./3-git/activity-01.md)
-- [Repo Install](./4-repo/1-installation.md)
+- [Repo](./4-repo/1-repo.md)
     - [Repo First Steps](./4-repo/2-first-steps.md)
     - [Repo Branch](./4-repo/3-Repo-Branch.md)
 - [The Linux system](./5-linux/linux-fundamental.md)
