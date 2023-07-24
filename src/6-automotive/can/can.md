@@ -51,18 +51,18 @@ Only if all nodes transmit recessive bits (ones), the Bus is in the recessive st
 
 ![Alt text](./media/image-8.png)
 
-SoF (Start-of-Frame) bit – Indicates the beginning  of a message with a dominant bit.
-Arbitration ID – identifies the message and indicates the message’s priority. Frames come in 2 formats:
-Standard which uses and 11-bit arbitration ID.
-Extended which uses a 29-bit arbitration ID.
-IDE (Identifier Extension) bit – allows differentiation between standard and extended frames.
-RTR (Remote Transmission Request) bit – serves to differentiate a remote frame from a data frame. A dominant RTR bit indicates a data frame. A recessive RTR bit indicates a remote frame.
-DLC (Data Length Code) – indicates the number of bytes the data field contains.
-Data field – contains 0 to 8 bytes of data.
-CRC (Cyclic Redundancy Check) -  contains 15-bit cyclic redundancy check code and a recessive delimiter bit. The CRC field is used for error detection.
-ACK (Acknowledgment) slot – Any CAN controller that correctly receives the message sends an ACL bit  at the end of the message. The transmitting node checks for the presence of the ACK bit on the bus and reattempts transmission if no acknowledge is detected. 
-SRR – Substitute remote request. (Only in extended CAN frame)
-R1, R0 – Reserved bits which must be set dominant , but accepted as either dominant or recessive. (Only in extended CAN frame)
+- **SoF (Start-of-Frame) bit** – Indicates the beginning  of a message with a dominant bit
+- **Arbitration ID** – identifies the message and indicates the message’s priority. Frames come in 2 formats:
+    **Standard** which uses and 11-bit arbitration ID.
+    **Extended** which uses a 29-bit arbitration ID.
+- **IDE (Identifier Extension) bit** – allows differentiation between standard and extended frames
+- - **RTR (Remote Transmission Request)** bit – serves to differentiate a remote frame from a data frame. A dominant RTR bit indicates a data frame. A recessive RTR bit indicates a remote frame
+- **DLC (Data Length Code)** – indicates the number of bytes the data field contains
+- **Data field** – contains 0 to 8 bytes of data
+- **CRC (Cyclic Redundancy Check)** -  contains 15-bit cyclic redundancy check code and a recessive delimiter bit. The CRC field is used for error detection
+- **ACK (Acknowledgment) slot** – Any CAN controller that correctly receives the message sends an ACL bit  at the end of the message. The transmitting node checks for the presence of the ACK bit on the bus and reattempts transmission if no acknowledge is detected
+- **SRR** – Substitute remote request. (Only in extended CAN frame)
+- **R1, R0** – Reserved bits which must be set dominant , but accepted as either dominant or recessive. (Only in extended CAN frame)
 
 ## CAN Arbitration
 
@@ -70,14 +70,10 @@ Arbitration means the allocation of bus access rights, in other words, which ECU
 
 Procedure:
     - All controllers monitor the bus while transmitting simultaneously.
-
     - A dominant bit (“0”) pulls the bus voltage level to zero.
-
     - When a controller transmits “1”, but observes “0” on the bus, it has lost arbitration.
-
     - Controllers who lost arbitration retreat immediately and retry later.
-
--   Arbitration is won by frame with lowest identifier = highest priority.
+    - Arbitration is won by frame with lowest identifier = highest priority.
 
 ![CAN Arbitration](./media/image-9.png)
 
@@ -89,11 +85,11 @@ More than 5 consecutive bits of the same polarity in CAN frame between the start
 
 ### How does Bit Stuffing work?
     - After five consecutive bits of same polarity, insert one bit of reverse polarity.
-    -CRC code is calculated before bit stuffing is done.
-    -Bit stuffing is done by the sender directly before transmission.
-    -De-stuffing is done by the receiver directly after reception.
-    -CRC code check is done after de-stuffing the frame.
-    -Bit stuffing is applied to part of the frame from SOF to CRC field.
+    - CRC code is calculated before bit stuffing is done.
+    - Bit stuffing is done by the sender directly before transmission.
+    - De-stuffing is done by the receiver directly after reception.
+    - CRC code check is done after de-stuffing the frame.
+    - Bit stuffing is applied to part of the frame from SOF to CRC field.
 
 
 ![Bit Stuffing ](./media/image-10.png)
@@ -103,11 +99,11 @@ More than 5 consecutive bits of the same polarity in CAN frame between the start
 
 ![Alt text](./media/image-11.png)
 
-    -CRC            Calculated and received CRC Checksum must match
-    -ACK            A frame must be Acknowledged by at least one other node (otherwise ACK-Error)
-    -Form           Frame integrity is not preserved, No dominant bits allowed in CRC Delimiter, ACK Delimiter, End of Frame, Intermission (Form Error)
-    -Bit Monitoring A transmitted bit must be correctly read back from the CAN bus (otherwise Bit Error) 
-    -Bit stuffing   6 consecutive bits with same polarity are not allowed between Start Of Frame and CRC Delimiter (otherwise Bit Stuffing Error)
+    - CRC            Calculated and received CRC Checksum must match
+    - ACK            A frame must be Acknowledged by at least one other node (otherwise ACK-Error)
+    - Form           Frame integrity is not preserved, No dominant bits allowed in CRC Delimiter, ACK Delimiter, End of Frame, Intermission (Form Error)
+    - Bit Monitoring A transmitted bit must be correctly read back from the CAN bus (otherwise Bit Error) 
+    - Bit stuffing   6 consecutive bits with same polarity are not allowed between Start Of Frame and CRC Delimiter (otherwise Bit Stuffing Error)
 
 ## CAN Error Manager
 Immediately after an error detection, an Error Frame is transmitted.
