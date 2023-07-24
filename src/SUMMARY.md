@@ -11,6 +11,7 @@
 - [Repo](./4-repo/1-repo.md)
     - [Repo First Steps](./4-repo/2-first-steps.md)
     - [Repo Branch](./4-repo/3-Repo-Branch.md)
+    - [Repo Activity](./4-repo/4-Activity.md)
 - [The Linux system](./5-linux/linux-fundamental.md)
 - [Automotive](./6-automotive/automotive.md)
     - [CAN](./6-automotive/can/can.md)
