@@ -69,11 +69,11 @@ Only if all nodes transmit recessive bits (ones), the Bus is in the recessive st
 Arbitration means the allocation of bus access rights, in other words, which ECU gets to transmit its message first. This evaluation occurs when several nodes start transmission on the bus at the same time.
 
 Procedure:
-    - All controllers monitor the bus while transmitting simultaneously.
-    - A dominant bit (“0”) pulls the bus voltage level to zero.
-    - When a controller transmits “1”, but observes “0” on the bus, it has lost arbitration.
-    - Controllers who lost arbitration retreat immediately and retry later.
-    - Arbitration is won by frame with lowest identifier = highest priority.
+- All controllers monitor the bus while transmitting simultaneously.
+- A dominant bit (“0”) pulls the bus voltage level to zero.
+- When a controller transmits “1”, but observes “0” on the bus, it has lost arbitration.
+- Controllers who lost arbitration retreat immediately and retry later.
+- Arbitration is won by frame with lowest identifier = highest priority.
 
 ![CAN Arbitration](./media/image-9.png)
 
@@ -84,12 +84,12 @@ The idea behind bit stuffing is to provide a guaranteed edge on the signal so th
 More than 5 consecutive bits of the same polarity in CAN frame between the start of Frame(SOF) to CRC field is considered as a faulty frame on CAN Bus and it signaled as stuff error on CAN line.
 
 ### How does Bit Stuffing work?
-    - After five consecutive bits of same polarity, insert one bit of reverse polarity.
-    - CRC code is calculated before bit stuffing is done.
-    - Bit stuffing is done by the sender directly before transmission.
-    - De-stuffing is done by the receiver directly after reception.
-    - CRC code check is done after de-stuffing the frame.
-    - Bit stuffing is applied to part of the frame from SOF to CRC field.
+- After five consecutive bits of same polarity, insert one bit of reverse polarity.
+- CRC code is calculated before bit stuffing is done.
+- Bit stuffing is done by the sender directly before transmission.
+- De-stuffing is done by the receiver directly after reception.
+- CRC code check is done after de-stuffing the frame.
+- Bit stuffing is applied to part of the frame from SOF to CRC field.
 
 
 ![Bit Stuffing ](./media/image-10.png)
@@ -99,11 +99,11 @@ More than 5 consecutive bits of the same polarity in CAN frame between the start
 
 ![Alt text](./media/image-11.png)
 
-    - CRC            Calculated and received CRC Checksum must match
-    - ACK            A frame must be Acknowledged by at least one other node (otherwise ACK-Error)
-    - Form           Frame integrity is not preserved, No dominant bits allowed in CRC Delimiter, ACK Delimiter, End of Frame, Intermission (Form Error)
-    - Bit Monitoring A transmitted bit must be correctly read back from the CAN bus (otherwise Bit Error) 
-    - Bit stuffing   6 consecutive bits with same polarity are not allowed between Start Of Frame and CRC Delimiter (otherwise Bit Stuffing Error)
+- CRC            Calculated and received CRC Checksum must match
+- ACK            A frame must be Acknowledged by at least one other node (otherwise ACK-Error)
+- Form           Frame integrity is not preserved, No dominant bits allowed in CRC Delimiter, ACK Delimiter, End of Frame, Intermission (Form Error)
+- Bit Monitoring A transmitted bit must be correctly read back from the CAN bus (otherwise Bit Error) 
+- Bit stuffing   6 consecutive bits with same polarity are not allowed between Start Of Frame and CRC Delimiter (otherwise Bit Stuffing Error)
 
 ## CAN Error Manager
 Immediately after an error detection, an Error Frame is transmitted.
