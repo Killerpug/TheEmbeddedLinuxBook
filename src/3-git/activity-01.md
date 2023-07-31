@@ -49,8 +49,8 @@ Note: Remember to compile it as $gcc calculator.c -o executable-Name
 ```
 Lets create a new repository and add this as the first commit.
 Hints:
-Check/update your user/email configuration(only on first time)
-Add calculator.c
+- Check/update your user/email configuration(only on first time)
+- Add calculator.c
 
 ## Incremental change 1
 Our first calculator only has the addition operation but we want to multiply as well.
