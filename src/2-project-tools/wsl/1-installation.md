@@ -10,17 +10,17 @@ The Windows Subsystem for Linux lets developers run a GNU/Linux environment -- i
 ## Why WSL
 WSL is a easy way to learn, understand and develop on linux without any need to spend time installing linux in your host machine, the process to install and use is simple and you can use most of the host resources, share files and tools between windows and Linux.
 
-Performance is the bad for WSL if we compare with Linux running directly host, we will have lower performance in WSL that same distribution running directly on host, this is expected as WSL is running virtualized on top of windows and sharing resources between both OS. 
+If we compare with Linux running directly host, we will have lower performance in WSL than the same distribution running directly on host, this is expected as WSL is running virtualized on top of windows and sharing resources between both OS. 
 
-We chose WSL for starting point, you will see the easy way to start working in Linux following the steps described in next chapters.
+We choose WSL for starting point, as you will see how easy is to start working in Linux following the steps described in next chapters.
 	
 ## Start with WSL
 	
-WSL have 2 different versions WSL1 and WSL2 we will use WSL2 as is version already tested for AGL. 
+WSL have 2 different versions WSL1 and WSL2, we will use WSL2 as this version is already tested for AGL. 
 
-Start installation is simple you just need open CMD, powershell or Terminal windows and type one of the below commands (a or b option)
+Starting installation is simple you just need open CMD, powershell or Terminal windows go with either one of the options below:
 
-a. Use specific distribution
+a) Use specific distribution
 
 First check the available distribution using below command 
 
@@ -38,7 +38,7 @@ Then type below command to install Ubuntu-20.04
 
  ![wsl --install Ubuntu-20.04](./media/image-1.png#center)
 
-b. Use Ubuntu by default then type this command 
+b) Use Ubuntu by default then type this command 
 
  ```
  wsl --install
@@ -52,12 +52,12 @@ See [official page](https://learn.microsoft.com/en-us/windows/wsl/install) for m
 After previous commands you will see the installation progress like this 
  ![Installation Progress](./media/image-3.png)
 
-Once this process completes you need provide user and password, for user name use lowercase if you use uppercase for user will get an error like in the red rectangles, good entry will ask for password if this is good 2 times installation will be completed successfully 
+Once this process completes you need provide user and password, for user name use lowercase, if you use uppercase for user will get an error like in the red rectangles. Accepted entry will ask for password again, then installation will be completed.
  ![Install Complete](./media/image-4.png)
 
 	
 ##  WSL Configuration
-WSL use 2 files to set the own configuration, the complete description of each configuration is available at this place: [wsl-config](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)
+WSL use 2 files to set it's own configuration, the complete description of each configuration is available at this place: [wsl-config](https://learn.microsoft.com/en-us/windows/wsl/wsl-config)
 
 1.- Internally to our Ubuntu \etc\wsl.conf, please create this file and add the below text
 
@@ -69,14 +69,14 @@ wsl.conf content:
 systemd=true
 ```
 
-2.- Externally ni Windows C:\Users\your-user\.wslconfig
+2.- Externally in Windows C:\Users\your-user\.wslconfig
 .wslconfig content: NOTE: memory, processors and swap options need to be adapted base on your PC
 
 ```
 # Settings apply across all Linux distros running on WSL 2
 [wsl2]
 	
-# How much memory to assign to the WSL2 should not excede 80% of total RAM memory
+# Memory to assign to the WSL2 should not excede 80% of total RAM memory
 memory=12GB
 	
 # How many processors to assign to the WSL2 
@@ -120,11 +120,10 @@ sudo apt-get --assume-yes install curl nano wget apt-transport-https ca-certific
 Try use the below commands in WSL:
  ![Linux Commands](./media/image-5.png)
 	
-Learn about command line commands - http://linuxcommand.org/tlcl.php
+Learn more about [Linux command line](http://linuxcommand.org/tlcl.php).
 	
 ##  Backup WSL
-I recommend after all tool installation and before start work with any project in WSL create a Backup and save in safe location, in this way you can recover your WSL without any problem and not need spend time installing all the tools again
-WSL have 2 command for this export and import command 
+I recommend after all tool installation and before start work with any project in WSL create a Backup and store it in safe location, in this way you can recover your WSL state, avoiding spending time installing all the tools again. WSL have 2 command for this export and import command 
 
 Backup Command:
 
