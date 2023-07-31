@@ -1,6 +1,5 @@
 # Summary
 
-
 - [Book Introduction](./1-book-introduction/agl-project.md)
 - [Project Tools](./2-project-tools/project_tool.md)
     - [WSL](./2-project-tools/wsl/1-installation.md)
@@ -8,8 +7,8 @@
     - [Putty](./2-project-tools/putty/1-installation.md)
 - [Git](./3-git/fundamental.md)
     - [Getting started](./3-git/getting-started.md)
-    - [Activity 01](./git/activity-01.md)
-    - [Activity 02](./git/activity-02.md)
+    - [Activity 01](./3-git/activity-01.md)
+    - [Activity 02](./3-git/activity-02.md)
 - [Repo](./4-repo/1-repo.md)
     - [Repo First Steps](./4-repo/2-first-steps.md)
     - [Repo Branch](./4-repo/3-Repo-Branch.md)
