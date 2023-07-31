@@ -17,9 +17,6 @@ all data that the server has.
 ## Recording changes in a repository
 Lets play!!! Try to add or modify a couple of files and store those changes in your local repository. Below is a list of commands that will be useful:
 
-- **git status** → determine which files are in which state(remember de lifecycle of file status)
-
-    - -s or --short, get simplified output of the state of files
 - **git add** → is a multipurpose command — you use it to begin tracking new files, to stage
 files, and to do other things like marking merge-conflicted files as resolved. It may be helpful to think of it more as “add precisely this content to the next commit”.
     - -A stages all changes stages new files and modifications, without deletions
@@ -28,6 +25,9 @@ files, and to do other things like marking merge-conflicted files as resolved. I
     - -m inline commit message
     - -a commit includes all modified files, letting you skip the git add
     - --amend redo that commit, make the additional changes you forgot, stage them, and commit again
+- **git push** → upload your changes to the remote server
+- **git status** → determine which files are in which state(remember de lifecycle of file status)
+    - -s or --short, get simplified output of the state of files
 - **git diff** → shows you the exact lines changed (added and removed), but not yet staged.
     - --staged or --cached. This command compares your staged changes to your last commit
 - **git log** → View commit history: lists the commits made in that repository from most recent to oldest

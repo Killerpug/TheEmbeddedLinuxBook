@@ -1,8 +1,8 @@
 # AGL
 
-<span style="color:#003399">
+<span>
 
-Automotive Grade Linux (AGL) is a collaborative, open-source project that brings together automakers, suppliers, and technology companies for the purpose of building Linux-based, open-source software platforms for automotive applications that can serve as de facto industry standards. AGL is providing 70-80% starting point for automakers this is a good option for student to learn about Automotive industry, linux, new technology and maybe contribute in future with demos o new features for this platform
+Automotive Grade Linux (AGL) is a collaborative, open-source project that brings together automakers, suppliers, and technology companies for building Linux-based, open-source software platforms for automotive applications that can serve as *de facto* industry standards. AGL is providing 70-80% starting point for automakers, this is a good option for student to learn about Automotive industry, linux, new technologies and maybe contribute in the future with demos or new features for this platform.
 
 AGL address all software in the vehicle like 
 - Infotainment
@@ -16,14 +16,14 @@ AGL address all software in the vehicle like
 - Virtualization Projects
 
 Following this book and getting corresponding mentoring you will be able to understand 
-- Sw version control tool
-- Linux system (Basic) WSL User
+- Software version control tool
+- Linux system: (Basic) WSL User
 - Yocto Project
 - Repo tool
 - Automotive Grade Linux system 
 - QT Basic
 - CAN
-- Code best practice 
+- Code best practices 
 
 And able to do in Linux
 - Add new services
