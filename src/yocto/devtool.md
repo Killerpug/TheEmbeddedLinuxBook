@@ -48,4 +48,11 @@ Generates a new recipe based on existing source code, it is flexible enough to a
 1.6 Finish your work with the recipe: ```devtool finish recipe layer```.  
 
 
+## Activity
+For this chapter you should:
+1. Create a new recipe
+2. Modify the source built by a recipe
+3. Upgrade a recipe to a new version
+
+
 

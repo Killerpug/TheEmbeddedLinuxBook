@@ -138,3 +138,6 @@ UBOOT_LOADADDRESS = ""
 ```
 MACHINE_FEATURES = ""
 ```  
+## Activity 
+Modify your local.conf to include a download and cache folder for your image.
+

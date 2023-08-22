@@ -186,3 +186,8 @@ do_install:append(){
 ## Add bb files into your build
 To add recipes files is necessary to modify the file **conf/local. conf** where it's important to add:
 ``` IMAGE_INSTALL_append = " recipe_name" ``` 
+
+## Activity
+For this activity, you must create and include in your bootable image, a service using a git repository.
+1. You can use the tools listed in this and previous chapters.
+2. Your service should be initialized by System D automatically
