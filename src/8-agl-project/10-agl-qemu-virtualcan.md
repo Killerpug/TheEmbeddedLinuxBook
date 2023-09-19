@@ -199,10 +199,7 @@ ip link set can0 type can bitrate 1000000
 ip link set can0 up
 ```
 
-Open candump tool for can0 you should see the messages sent by CANdevStudio from HOST in AGL
+Open candump tool for can0 you should see the messages sent by CANdevStudio from WSL(HOST) in AGL
 
-![Demo](./media/Demo.png)
-
-CAN link between Host and AGL
 ![Demo Gif](./media/DemoGif.gif)
 
