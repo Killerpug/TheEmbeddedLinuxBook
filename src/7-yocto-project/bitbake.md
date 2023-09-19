@@ -44,3 +44,6 @@ This command allows us to check what layers are added to our configuration file 
 The main prop use for running Bitbake is to produce some kind of output such as a single installable package, kernel, software development kit, or even a full board-specific bootable Linux image.
 Also, you can execute bitbake command with different options, for example: to compile a single recipe, capture or clear data, or simply return information about the execution environment.
 >Note: Before executing Bitbake, you should check your configuration file **local. conf**, to corroborate some specific variables that could cause some damage in your build if these don't have a good definition.
+
+## Activity
+Create and include a new layer to your booting image using only bitbake as your tool, you shouldn't modify the conf files by hand, and run the command to create the image after you test this in a virtual machine.
