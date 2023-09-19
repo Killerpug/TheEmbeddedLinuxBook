@@ -5,6 +5,7 @@
     - [WSL](./2-project-tools/wsl/1-installation.md)
     - [Virtual box](./2-project-tools/virtual-box/1-installation.md)
     - [Putty](./2-project-tools/putty/1-installation.md)
+    - [QT](./2-project-tools/qt/qt.md)
 - [Git](./3-git/fundamental.md)
     - [Getting started](./3-git/getting-started.md)
     - [Activity 01](./3-git/activity-01.md)
