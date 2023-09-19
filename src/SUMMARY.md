@@ -14,7 +14,7 @@
     - [Repo Branch](./4-repo/3-Repo-Branch.md)
     - [Repo Activity](./4-repo/4-Activity.md)
 - [The Linux system](./5-linux/linux-fundamental.md)
-    - [Linux Socket CAN](./5-linux/linux-socketCAN.md)
+    - [Linux Socket CAN](./5-linux/linux-socket_can.md)
     - [Linux virtual CAN](./5-linux/linux-vcan.md)
     - [Linux BusyBox](./5-linux/linux-tools.md)
 - [Automotive](./6-automotive/automotive.md)
