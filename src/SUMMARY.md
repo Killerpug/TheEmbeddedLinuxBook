@@ -15,6 +15,9 @@
     - [Repo Branch](./4-repo/3-Repo-Branch.md)
     - [Repo Activity](./4-repo/4-Activity.md)
 - [The Linux system](./5-linux/linux-fundamental.md)
+    - [Linux Socket CAN](./5-linux/linux-socketCAN.md)
+    - [Linux virtual CAN](./5-linux/linux-vcan.md)
+    - [Linux BusyBox](./5-linux/linux-tools.md)
 - [Automotive](./6-automotive/automotive.md)
     - [CAN](./6-automotive/can/can.md)
     - [SW Design](./6-automotive/sw-design/sw_design.md)
@@ -26,5 +29,5 @@
     - [Bitbake](./7-yocto-project/bitbake.md)
     - [Devtool](./7-yocto-project/devtool.md)
 - [AGL Project](./8-agl-project/1-agl-project.md)
-- [AGL Virtual CAN](./8-agl-project/10-agl-qemu-virtualcan.md)
+    - [AGL Virtual CAN](./8-agl-project/10-agl-qemu-virtualcan.md)
 
